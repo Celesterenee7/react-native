@@ -1,7 +1,7 @@
 # React Native Practice App
 #### By Celeste Renee Morton
 ## Description:
-Learning the basics of React Natvie - yaaaaay :)
+Learning the basics of React Native - yaaaaay :)
 
 ## Specifications:
 
@@ -16,6 +16,6 @@ _This program utilized:_
 * _JAVASCRIPT ES6_
 * _CSS_
 * _HTML_
-_and was built in Visiual Studio Code_
+_and was built in Visual Studio Code_
 ### Copyright (c) 2020 Celeste Renee Morton
 This software is installed under MIT license.

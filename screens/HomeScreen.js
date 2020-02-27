@@ -8,6 +8,14 @@ import { MonoText } from '../components/StyledText';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
+
+    <View style={styles.topTabBarInfoContainer}>
+      <Text style={styles.tabBarInfoText}>Navbar maybe?</Text>
+      <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
+        <MonoText style={styles.codeHighlightText}>navigation/TopTabNavigator.js</MonoText>
+      </View>
+    </View>
+
       <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
         <View style={styles.welcomeContainer}>
           <Image
@@ -25,31 +33,26 @@ export default function HomeScreen() {
 
           <Text style={styles.getStartedText}>Passionate from miles away.</Text>
 
-          <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-            <MonoText></MonoText>
-          </View>
-
           <Text style={styles.getStartedText}>
-            Passive with the things you say.
+            Passive with the things you say...
           </Text>
           <Text style={styles.getStartedText}>
             Passing up on my old ways...
           </Text>
           <Text style={styles.getStartedText}>
-            I can't blame you now.
+            Passing up on my old ways...
           </Text>
         </View>
 
         <View style={styles.helpContainer}>
           <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
-            <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
+            <Text style={styles.helpLinkText}>Hyperlink example</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>
 
       <View style={styles.tabBarInfoContainer}>
-        <Text style={styles.tabBarInfoText}>Bottom Tab Navigator:</Text>
-
+        <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
         <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
           <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
         </View>
@@ -163,6 +166,31 @@ const styles = StyleSheet.create({
     backgroundColor: '#fbfbfb',
     paddingVertical: 20,
   },
+
+  topTabBarInfoContainer: {
+    top: 0,
+    left: 0,
+    right: 0,
+    ...Platform.select({
+      ios: {
+        shadowColor: 'black',
+        shadowOffset: { width: 0, height: -3 },
+        shadowOpacity: 0.1,
+        shadowRadius: 3,
+      },
+      android: {
+        elevation: 20,
+      },
+    }),
+    alignItems: 'center',
+    backgroundColor: '#fbfbfb',
+    paddingVertical: 20,
+  },
+
+
+
+
+
   tabBarInfoText: {
     fontSize: 17,
     color: 'rgba(96,100,109, 1)',
